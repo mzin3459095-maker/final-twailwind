@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "daisyui": "^5.7.46",
+    "swiper": "^14.3.0",
+    "tailwindcss": "^4.3.3"
+  },
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i app.css -o output.css",
+    "watch": "npx @tailwindcss/cli -i app.css -o output.css --watch",
+    "dev": "vite --port 3000"
+  },
+  "devDependencies": {
+    "vite": "^8.3.2"
+  }
+}

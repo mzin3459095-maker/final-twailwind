@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Exercise Tailwind</title>
+  <link href="output.css" rel="stylesheet">
+</head>
+
+<body class="bg-[#070817] border  ">
+  <!-- Heading 1-->
+  <!-- <div class="navbar bg-base-100 shadow-sm">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg aria-label="Menu" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabindex="-1"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li><a>Item 1</a></li>
+        <li>
+          <a>Parent</a>
+          <ul class="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost text-xl">daisyUI</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a>Item 1</a></li>
+      <li>
+        <details>
+          <summary>Parent</summary>
+          <ul class="p-2 bg-base-100 w-40 z-1">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a>Item 3</a></li>
+    </ul>
+  </div>
+  <div class="navbar-end">
+    <a class="btn">Button</a>
+  </div>
+</div> -->
+  <!-- Beyond 1 -->
+  <div class=" mt-6 sm:mt-8 relative w-full  lg:h-full overflow-hidden  border-slate-800 bg-[#05060f]">
+
+    <!-- Background Hero Image with Dark Gradient Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img src="./public/imgaes/hero.png" class="w-full h-full object-cover opacity-60" alt="Hero Poster">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#05060f] via-[#05060f]/60 to-transparent"></div>
+    </div>
+
+    <!-- Navbar Section -->
+    <div class="relative z-20 flex items-center justify-between px-4 sm:px-8 py-4 text-white">
+
+      <!-- Left Navigation (Logo & Mobile Menu) -->
+      <div class="flex items-center gap-2 sm:gap-4">
+        <div class="dropdown lg:hidden">
+          <div tabindex="0" role="button" class="btn btn-ghost p-1 text-white">
+            <svg aria-label="Menu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="-1"
+            class="menu menu-sm dropdown-content bg-[#0b0f19] border border-slate-800 rounded-xl z-[50] mt-3 w-48 p-2 shadow-xl">
+            <li><a>Home</a></li>
+            <li><a>Movies</a></li>
+            <li><a>Series</a></li>
+            <li><a>New & Popular</a></li>
+          </ul>
+        </div>
+
+        <!-- Brand Logo -->
+        <div class="flex items-center gap-0.5 cursor-pointer">
+          <span class="text-xl sm:text-2xl font-bold tracking-wider">NOVA</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="size-5 sm:size-6 text-[#8b5cff]">
+            <path
+              d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 gap-2 text-sm text-gray-300">
+          <li><a class="hover:text-white">Home</a></li>
+          <li><a class="hover:text-white">Movies</a></li>
+          <li><a class="hover:text-white">Series</a></li>
+          <li><a class="hover:text-white">New & Popular</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Controls -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Search Icon -->
+        <button class="p-1 text-gray-300 hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-5 sm:size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+        </button>
+
+        <!-- MyList Badge -->
+        <a
+          class="px-2.5 py-1 flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-900/60 text-xs sm:text-sm cursor-pointer hover:border-slate-500">
+          <span>MyList</span>
+          <span class="text-emerald-400 font-bold">2</span>
+        </a>
+
+        <!-- Profile Icon -->
+        <div
+          class="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-600 via-indigo-500 to-sky-500 text-xs sm:text-sm font-semibold shadow-md">
+          N
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Content Section -->
+    <div class="relative z-10 px-4 sm:px-8 pt-10 sm:pt-16 pb-12 max-w-2xl text-white">
+
+      <!-- Tagline -->
+      <div class="flex items-center gap-2 mb-2">
+        <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+        <h3 class="text-xs sm:text-sm font-bold tracking-wider text-[#8b5cff]">NOVA+ ORIGINAL</h3>
+      </div>
+
+      <!-- Titles (Responsive font size) -->
+      <h1 class="text-4xl sm:text-6xl lg:text-[90px] font-bold tracking-tight text-white leading-none">
+        BEYOND
+      </h1>
+      <h1
+        class="text-4xl sm:text-6xl lg:text-[90px] font-bold tracking-tight text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.8)] leading-none mt-1 sm:mt-2">
+        THE SIGNAL
+      </h1>
+
+      <!-- Description -->
+      <p class="text-xs sm:text-sm text-gray-300 mt-3 sm:mt-4 max-w-md leading-relaxed">
+        A lost transmission. A silent planet. One crew sent beyond the edge of everything we know.
+      </p>
+
+      <!-- Metadata Badges -->
+      <div class="flex flex-wrap items-center gap-2.5 sm:gap-4 mt-4 sm:mt-6 text-xs sm:text-sm">
+        <span class="text-emerald-400 font-bold">98% Match</span>
+        <span class="text-gray-400">2026</span>
+        <span class="text-gray-400">2h 08m</span>
+        <span class="border border-slate-600 rounded px-1.5 py-0.5 text-xs text-gray-300">16+</span>
+        <span class="text-gray-400">4K</span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center gap-2.5 sm:gap-4 mt-6 sm:mt-8">
+
+        <!-- Play Now Button -->
+        <button
+          class="flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-500 to-sky-500 text-xs sm:text-sm font-semibold shadow-lg hover:opacity-95 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 sm:size-5">
+            <path fill-rule="evenodd"
+              d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+              clip-rule="evenodd" />
+          </svg>
+          <span>Play Now</span>
+        </button>
+
+        <!-- More Info Button -->
+        <button
+          class="flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-xs sm:text-sm font-medium hover:border-emerald-500 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-4 sm:size-5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+          </svg>
+          <span>More Info</span>
+        </button>
+
+        <!-- Add to List Icon Button -->
+        <button
+          class="p-2.5 sm:p-3 rounded-full bg-slate-900/80 border border-slate-700 text-gray-300 hover:border-emerald-500 hover:text-white transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 sm:size-5">
+            <path fill-rule="evenodd"
+              d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+
+      </div>
+      <div class="flex gap-1 text-xs sm:text-sm text-gray-400 mt-3 lg:mt-25 max-w-md leading-relaxed">
+        <div class="text-gray-700"> SCROLL TO EXPLORE </div>
+        <div class="p-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-3 text-gray-700">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- Trending 2 -->
+  <div class=" p-6  ">
+    <div class="p-6">
+      <h5 class="text-[#8b5cff] ">WHAT'S HOT</h5>
+      <div class="lg:flex lg:justify-between felx-col lg:felx-row ">
+        <div class="flex gap-2">
+          <h1 class="text-4xl text-white">Trending </h1>
+          <h1 class="text-[#8b5cff] text-4xl">now</h1>
+        </div>
+
+        <div class="flex flex-wrap gap-2" id="filter-container">
+          <button id="all_btn"
+            class="filter-btn bg-[#8b5cff] border border-[#8b5cff] text-white px-2 py-1 md:px-4 md:py-1.5 rounded-lg text-xs  md:text-sm font-medium transition">
+            All
+          </button>
+          <button id="sci-fi_btn"
+            class="filter-btn bg-slate-900 border border-slate-700 text-slate-300 hover:border-[#8b5cff] px-4 py-1.5 rounded-lg text-sm font-medium transition">
+            Sci-Fi
+          </button>
+          <button id="action_btn"
+            class="filter-btn bg-slate-900 border border-slate-700 text-slate-300 hover:border-[#8b5cff] px-4 py-1.5 rounded-lg text-sm font-medium transition">
+            Action
+          </button>
+          <button id="thriller_btn"
+            class="filter-btn bg-slate-900 border border-slate-700 text-slate-300 hover:border-[#8b5cff] px-4 py-1.5 rounded-lg text-sm font-medium transition">
+            Thriller
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <div class=" w-full h-full overflow-hidden p-1 gap-2 grid grid-cols-1 md:grid-cols-3  lg:grid-cols-5 ">
+
+      <!-- Card-1 -->
+      <div class=scifi>
+        <div class="relative group ">
+          <img src="./public/imgaes/photo-1446776811953-b23d57bd21aa.avif" id="h1"
+            class=" rounded-xl object-cover w-full h-[400px] group-hover:-translate-y-2 hover:shadow-xl hover:shadow-[#8b5cff] transition-all duration-500 "
+            alt="">
+
+
+          <div class="absolute top-4 left-3 text-white group-hover:-translate-y-2 transition duration-500 ">
+            <h6
+              class="text-sm font-semibold w-8 h-6 rounded-md text-white bg-slate-600 -p-1 active text-center border border-slate-500">
+              4K</h6>
+          </div>
+
+          <div class="absolute bottom-3 right-3 group-hover:-translate-y-2 transition duration-500 ">
+            <div
+              class=" w-9 h-9 p-[8px] bottom-4 rounded-full bg-[#8b5cff] invisible group-hover:visible transition-all duration-500 ">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-white">
+                <path fill-rule="evenodd"
+                  d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="pt-1 ">
+          <div class="flex items-center justify-between px-2 ">
+            <h3 class="text-base font-semibold text-gray-100">Beyond the Signal</h3>
+
+            <div class="flex items-center space-x-l text-cyan-400 text-sm font-semibold">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-2">
+                  <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+                </svg>
+
+              </div>
+              <div>9.1</div>
+            </div>
+          </div>
+
+          <div class="text-xs text-gray-400 mt-1 px-2 mb-5">
+            2026 .Sci-Fi
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Card-2 -->
+      <div class=thriller>
+        <div class="relative group ">
+          <img src="./public/imgaes/photo-1519608487953-e999c86e7455.avif" id="h1"
+            class=" rounded-xl object-cover w-full h-[400px] group-hover:-translate-y-2 hover:shadow-xl hover:shadow-[#8b5cff] transition-all duration-500 "
+            alt="">
+
+
+          <div class="absolute top-4 left-3 text-white group-hover:-translate-y-2 transition duration-500 ">
+            <h6
+              class="text-sm font-semibold w-8 h-6 rounded-md text-white bg-slate-600 -p-1 active text-center border border-slate-500">
+              HRD</h6>
+          </div>
+
+          <div class="absolute bottom-3 right-3 group-hover:-translate-y-2 transition duration-500 ">
+            <div
+              class=" w-9 h-9 p-[8px] bottom-4 rounded-full bg-[#8b5cff] invisible group-hover:visible transition-all duration-500 ">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-white">
+                <path fill-rule="evenodd"
+                  d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="pt-1 ">
+          <div class="flex items-center justify-between px-2 ">
+            <h3 class="text-base font-semibold text-gray-100">Neon District</h3>
+
+            <div class="flex items-center space-x-l text-cyan-400 text-sm font-semibold">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-2">
+                  <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+                </svg>
+
+              </div>
+              <div>8.7</div>
+            </div>
+          </div>
+
+          <div class="text-xs text-gray-400 mt-1 px-2 mb-5">
+            2026 .Thriller
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Card-3 -->
+      <div class=action>
+        <div class="relative group ">
+          <img src="./public/imgaes/photo-1500530855697-b586d89ba3ee.avif" id="h1"
+            class=" rounded-xl object-cover w-full h-[400px] group-hover:-translate-y-2 hover:shadow-xl hover:shadow-[#8b5cff] transition-all duration-500 "
+            alt="">
+
+
+          <div class="absolute top-4 left-3 text-white group-hover:-translate-y-2 transition duration-500 ">
+            <h6
+              class="text-sm font-semibold w-8 h-6 rounded-md text-white bg-slate-600 -p-1 active text-center border border-slate-500">
+              4K</h6>
+          </div>
+
+          <div class="absolute bottom-3 right-3 group-hover:-translate-y-2 transition duration-500 ">
+            <div
+              class=" w-9 h-9 p-[8px] bottom-4 rounded-full bg-[#8b5cff] invisible group-hover:visible transition-all duration-500 ">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-white">
+                <path fill-rule="evenodd"
+                  d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="pt-1 ">
+          <div class="flex items-center justify-between px-2 ">
+            <h3 class="text-base font-semibold text-gray-100">Velocity Zero</h3>
+
+            <div class="flex items-center space-x-l text-cyan-400 text-sm font-semibold">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-2">
+                  <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+                </svg>
+
+              </div>
+              <div>8.4</div>
+            </div>
+          </div>
+
+          <div class="text-xs text-gray-400 mt-1 px-2 mb-5">
+            2025 .Action
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Card-4 -->
+      <div class=scifi>
+        <div class="relative group ">
+          <img src="./public/imgaes/card-4.avif" id="h1"
+            class=" rounded-xl object-cover w-full h-[400px] group-hover:-translate-y-2 hover:shadow-xl hover:shadow-[#8b5cff] transition-all duration-500 "
+            alt="">
+
+
+          <div class="absolute top-4 left-3 text-white group-hover:-translate-y-2 transition duration-500 ">
+            <h6
+              class="text-sm font-semibold w-8 h-6 rounded-md text-white bg-slate-600 -p-1 active text-center border border-slate-500">
+              New</h6>
+          </div>
+
+          <div class="absolute bottom-3 right-3 group-hover:-translate-y-2 transition duration-500 ">
+
+
+            <!-- You can open the modal using ID.showModal() method -->
+            <button class="btn  w-9 h-9 p-[8px] bottom-4 rounded-full bg-[#8b5cff] invisible group-hover:visible"
+              onclick="my_modal_3.showModal()">
+              <div
+                class=" w-9 h-9 p-[8px] bottom-4 rounded-full bg-[#8b5cff] invisible group-hover:visible transition-all duration-500 ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                  class="size-5 text-white">
+                  <path fill-rule="evenodd"
+                    d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </div>
+            </button>
+            <dialog id="my_modal_3" class="modal">
+              <div class="modal-box w-11/12 max-w-3xl p-0 overflow-hidden relative">
+                <!-- Close button -->
+                <form method="dialog">
+                  <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 z-10 text-white">✕</button>
+                </form>
+
+                <!-- Modal Content Row -->
+                <div class="flex flex-col md:flex-row w-full shadow-xl shadow-[#8b5cff]/30 bg-[#070817]">
+                  <!-- Left Image Half -->
+                  <div class="basis-1/2 w-full md:w-1/2">
+                    <img src="./public/imgaes/card-4.avif" class="object-cover w-full h-full min-h-[300px]"
+                      alt="Echo Protocol" />
+                  </div>
+
+                  <!-- Right Content Half -->
+                  <div class="basis-1/2 w-full md:w-1/2 p-6 flex flex-col justify-center">
+                    <div>
+                      <h5 class="text-xs font-semibold tracking-wider text-[#8b5cff]">NOVA-FEATURE</h5>
+                      <h1 class="font-bold text-2xl py-1 text-white">Echo Protocol</h1>
+
+                      <div class="flex items-center gap-3 text-xs my-2">
+                        <span class="text-green-500 font-semibold">97% Match</span>
+                        <span class="text-gray-300">2026</span>
+                        <span class="text-gray-300">1hr 49min</span>
+                        <span class="text-gray-300 border border-gray-600 px-2 py-0.5 rounded text-[10px]">16+</span>
+                      </div>
+
+                      <p class="text-gray-300 text-sm leading-relaxed my-3">
+                        An artificial intelligence trained on vanished voices begins predicting disasters twelve hours
+                        before they happen.
+                      </p>
+
+                      <div class="flex items-center gap-3 mt-4">
+                        <button
+                          class="bg-[#8b5cff] text-black hover:bg-[#7a4be6] px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                          </svg>
+                          Play
+                        </button>
+
+                        <button id="myListBtn" onclick="toggleMyList()"
+                          class="border border-green-500 text-green-500 hover:bg-green-500/10 px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2 transition-colors">
+
+                          <!-- Icon (Checkmark by default) -->
+                          <svg id="myListIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                          </svg>
+
+                          <!-- Text -->
+                          <span id="myListText">Added</span>
+                        </button>
+
+                        <script>
+                          let isAdded = true;
+
+                          function toggleMyList() {
+                            const btn = document.getElementById("myListBtn");
+                            const icon = document.getElementById("myListIcon");
+                            const text = document.getElementById("myListText");
+
+                            isAdded = !isAdded;
+
+                            if (isAdded) {
+                              // "Added" State
+                              btn.className = "border border-green-500 text-green-500 hover:bg-green-500/10 px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2 transition-colors";
+                              icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />`;
+                              text.textContent = "Added";
+                            } else {
+                              // "Add to List" State
+                              btn.className = "border border-gray-400 text-gray-300 hover:bg-white/10 px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2 transition-colors";
+                              icon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />`;
+                              text.textContent = "Add to List";
+                            }
+                          }
+                        </script>
+
+
+                        <!-- <button
+                          class="border border-green-500 text-green-500 hover:bg-green-500/10 px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                          </svg>
+                          My List
+                        </button> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dialog>
+          </div>
+
+        </div>
+
+        <div class="pt-1 ">
+          <div class="flex items-center justify-between px-2 ">
+            <h3 class="text-base font-semibold text-gray-100">Echo Protocol</h3>
+
+            <div class="flex items-center space-x-l text-cyan-400 text-sm font-semibold">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-2">
+                  <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+                </svg>
+
+              </div>
+              <div>8.8</div>
+            </div>
+          </div>
+
+          <div class="text-xs text-gray-400 mt-1 px-2 mb-5">
+            2026 .Sci-Fi
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Card-5 -->
+      <div class=action>
+        <div class="relative group ">
+          <img src="./public/imgaes/photo-1485846234645-a62644f84728.avif" id="h1"
+            class=" rounded-xl object-cover w-full h-[400px] group-hover:-translate-y-2 hover:shadow-xl hover:shadow-[#8b5cff] transition-all duration-500 "
+            alt="">
+
+
+          <div class="absolute top-4 left-3 text-white group-hover:-translate-y-2 transition duration-500 ">
+            <h6
+              class="text-sm font-semibold w-8 h-6 rounded-md text-white bg-slate-600 -p-1 active text-center border border-slate-500">
+              4K</h6>
+          </div>
+
+          <div
+            class="absolute bottom-3 right-3 group-hover:-translate-y-2 transition duration-500 invisible group-hover:visible">
+            <div
+              class=" w-9 h-9 p-[8px] bottom-4 rounded-full bg-[#8b5cff] invisible group-hover:visible transition-all duration-500 ">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-white">
+                <path fill-rule="evenodd"
+                  d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                  clip-rule="evenodd" />
+              </svg>
+
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="pt-1 ">
+          <div class="flex items-center justify-between px-2 ">
+            <h3 class="text-base font-semibold text-gray-100">Apex Run</h3>
+
+            <div class="flex items-center space-x-l text-cyan-400 text-sm font-semibold">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-2">
+                  <path fill-rule="evenodd"
+                    d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                    clip-rule="evenodd" />
+                </svg>
+
+              </div>
+              <div>8.2</div>
+            </div>
+          </div>
+
+          <div class="text-xs text-gray-400 mt-1 px-2 mb-5">
+            2026 .Action
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Continue watching 3 -->
+  <div class="p-6 ">
+    <h5 class="text-[#8b5cff] text-xs  lg:text-base ">PLCK UP WHERE YOU LEFT OFF</h5>
+    <div class="flex gap-2 ">
+      <h1 class=" text-xl md:text-2xl lg:text-4xl text-white">Continue </h1>
+      <h1 class="text-[#8b5cff] text-xl md:text-2xl lg:text-4xl">watching</h1>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 pt-3 gap-3 ">
+      <!-- photo-1 -->
+      <div class="relative">
+        <img src="./public/imgaes/photo-1464802686167-b939a6910659.avif" alt=""
+          class=" w-80 md:w-full lg:w-full h-60 object-cover rounded-2xl">
+        <div class="absolute bottom-15 right-3 text-white ">
+          <h6
+            class="text-sm font-semibold w-17 h-6 rounded-md text-white bg-slate-600 -p-1 active text-center border border-slate-500">
+            32min left</h6>
+        </div>
+
+        <div class="absolute  bottom-30 right-34 md:right-80 lg:bottom-29 lg:right-44 text-white ">
+          <div class=" w-10 h-10 p-[8px] rounded-full bg-slate-600 border border-slate-500 ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 ">
+              <path fill-rule="evenodd"
+                d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                clip-rule="evenodd" />
+            </svg>
+
+          </div>
+        </div>
+
+
+        <div class="pt-1 ">
+          <div class="flex items-center justify-between px-2 ">
+            <h3 class="text-base font-semibold text-gray-100">Dark Matter</h3>
+
+            <div class="flex items-center space-x-l text-gray-400 text-sm font-semibold">
+
+              <div>S1.E6</div>
+            </div>
+          </div>
+
+          <div class="w-73 md:w-170 lg:w-99 h-1 bg-gray-500 rounded-lg overflow-hidden">
+            <div class="w-[80%] h-1 bg-gradient-to-r from-purple-600 via-indigo-400 to-sky-500 rounded-lg"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- photo-2 -->
+      <div class="relative">
+        <img src="./public/imgaes/photo-1519501025264-65ba15a82390.avif" alt=""
+          class="w-80 md:w-full lg:w-full h-60 object-cover rounded-2xl">
+        <div class="absolute bottom-15 right-3 text-white ">
+          <h6
+            class="text-sm font-semibold w-17 h-6 rounded-md text-white bg-slate-600 -p-1 active text-center border border-slate-500">
+            18min left</h6>
+        </div>
+
+        <div class="absolute  bottom-30 right-34 md:right-80 lg:bottom-29 lg:right-44 text-white ">
+          <div class=" w-10 h-10  p-[8px]  rounded-full bg-slate-600 border border-slate-500 ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 ">
+              <path fill-rule="evenodd"
+                d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                clip-rule="evenodd" />
+            </svg>
+
+          </div>
+        </div>
+
+
+        <div class="pt-1 ">
+          <div class="flex items-center justify-between px-2 ">
+            <h3 class="text-base font-semibold text-gray-100">Glass City</h3>
+
+            <div class="flex items-center space-x-l text-gray-400 text-sm font-semibold">
+
+              <div>S2.E3</div>
+            </div>
+          </div>
+
+          <div class="w-73 md:w-170 lg:w-99 h-1 bg-gray-500 rounded-lg overflow-hidden">
+            <div class="w-[60%] h-1 bg-gradient-to-r from-purple-600 via-indigo-400 to-sky-500 rounded-lg"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- photo-3 -->
+      <div class="relative ">
+        <img src="./public/imgaes/photo-1500530855697-b586d89ba3ee.avif" alt=""
+          class="w-80 md:w-full lg:w-full h-60 object-cover rounded-2xl">
+        <div class="absolute bottom-15 right-3 text-white ">
+          <h6
+            class="text-sm font-semibold w-17 h-6 rounded-md text-white bg-slate-600 -p-1 active text-center border border-slate-500">
+            41min left</h6>
+        </div>
+
+        <div class="absolute  bottom-30 right-34 md:right-80 lg:bottom-29 lg:right-44 text-white">
+          <div class=" w-10 h-10 p-[8px] rounded-full bg-slate-600 border border-slate-500 ">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 ">
+              <path fill-rule="evenodd"
+                d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                clip-rule="evenodd" />
+            </svg>
+
+          </div>
+        </div>
+
+
+        <div class="pt-1 ">
+          <div class="flex items-center justify-between px-2 ">
+            <h3 class="text-base font-semibold text-gray-100">After Earth</h3>
+
+            <div class="flex items-center space-x-l text-gray-400 text-sm font-semibold">
+
+              <div>S1.E2</div>
+            </div>
+          </div>
+
+          <div class="w-73 md:w-170 lg:w-99 h-1 bg-gray-500 rounded-lg overflow-hidden">
+            <div class="w-[30%] h-1 bg-gradient-to-r from-purple-600 via-indigo-400 to-sky-500 rounded-lg"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <!-- Chroma city 4 -->
+  <div class=" ">
+    <div
+      class="flex  lg:flex-row mx-auto size-90 w-full shadow shadow-[#8b5cff]/100 m-40 border border-[#070817] rounded-3xl">
+
+      <img src="https://i.pinimg.com/736x/1c/9e/63/1c9e6317993b73400d6b5906f7159042.jpg"
+        class="object-cover basis-1/2 rounded-l-full w-2" alt="">
+      <div class="basis-1/2 bg-[#070817] rounded-r-3xl p-6 flex flex-col justify-center items-center">
+        <div class="mx-auto">
+          <h5 class="text-sm text-[#8b5cff]">NOVA+EXCLUSIVE</h5>
+          <h1 class="font-bold text-2xl p-1 text-white">CHROMA</h1>
+          <div class="flex gap-3">
+            <div class="flex items-center gap-1.5 -skew-x-12">
+              <div class="w-2.5 h-7 bg-cyan-400 rounded-xs"></div>
+              <div class="w-2.5 h-7 bg-cyan-400 rounded-xs"></div>
+            </div>
+            <h1 class="text-white">CITY</h1>
+          </div>
+          <h1 class="text-white">In a city where memories can be bought and solid, one detective discover a memory
+            that
+            should not exist</h1>
+
+          <div class="flex sm:gap-1 lg:gap-3">
+            <h1 class="text-green-700 lg:text-green-700">96%Match</h1>
+            <h1 class="sm:text-xs lg:text-xl text-white lg:text-white">8Episodes</h1>
+            <h1 class="text-white lg:text-white">2026</h1>
+            <h1 class="text-white lg:text-white w-8 h-5 border rounded-xl -p-2">19+</h1>
+          </div>
+
+
+          <div class="flex items-center gap-3 mt-4">
+
+            <button
+              class="bg-[#8b5cff] text-black hover:bg-[#7a4be6] px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2"
+              onclick="my_modal_3.showModal()">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+              </svg>
+              Play
+            </button>
+
+            <button id="listBtn"
+              class="px-4 py-2 border border-slate-700 hover:border-slate-500 rounded-lg text-white font-medium transition-all duration-200">
+              + My List
+            </button>
+
+            <script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const btn = document.getElementById('listBtn');
+                let isAdded = false;
+
+                btn.addEventListener('click', () => {
+                  isAdded = !isAdded;
+
+                  if (isAdded) {
+                    btn.innerText = '✓ Added';
+                    // Remove default state classes
+                    btn.classList.remove('text-white', 'border-slate-700', 'hover:border-slate-500');
+                    // Add active state classes
+                    btn.classList.add('text-emerald-400', 'border-emerald-500', 'hover:border-emerald-400');
+                  } else {
+                    btn.innerText = '+ My List';
+                    // Remove active state classes
+                    btn.classList.remove('text-emerald-400', 'border-emerald-500', 'hover:border-emerald-400');
+                    // Restore default state classes
+                    btn.classList.add('text-white', 'border-slate-700', 'hover:border-slate-500');
+                  }
+                });
+              });
+            </script>
+
+
+            <!-- <button
+                          class="border border-green-500 text-green-500 hover:bg-green-500/10 px-4 py-2 rounded-xl text-sm font-medium flex items-center gap-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                          </svg>
+                          My List
+                        </button> -->
+
+
+
+
+            <!-- <button class="bg-[#8b5cff] w-17 h-7 mt-5 rounded-xl"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1 text-black">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+            </svg>
+            Play</button>
+          <button class="border border-green-500 w-17 h-7 mt-5 rounded-xl"><svg xmlns="http://www.w3.org/2000/svg"
+              fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+            </svg>
+            Added</button> -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Top 10 -->
+
+  <div class="p-6  ">
+    <h5 class="text-[#8b5cff] ">MOST WATCHED THIS WEEK</h5>
+    <div class="flex gap-2  mb-5">
+      <h1 class="text-4xl text-white">Top </h1>
+      <h1 class="text-[#8b5cff] text-4xl">10</h1>
+    </div>
+
+    <div class="swiper swiper-one !overflow-visible flex">
+      <div class="swiper-wrapper  gap-5 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide !w-auto">
+          <div class="relative flex items-center group cursor-pointer gap-8 ">
+            <!-- Outlined Number -->
+            <span
+              class=" mb-0 text-[100px] md:text-[140px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)]  -mr-5 md:-mr-7">
+              1
+            </span>
+            <!-- Poster & Title -->
+            <div class="relative z-10">
+              <img src="./public/imgaes/photo-1519608487953-e999c86e7455.avif" alt="Neon District"
+                class="rounded-2xl object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px] shadow-lg shadow-[#8b5cff]/20 transition-transform duration-300 group-hover:scale-105">
+              <div class="text-xs text-gray-400 mt-2 text-center">
+                Neon District
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide !w-auto">
+          <div class="relative flex items-center group cursor-pointer gap-7">
+            <span
+              class="text-[100px] md:text-[140px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] z-0 -mr-6 md:-mr-8">
+              2
+            </span>
+            <div class="relative z-10">
+              <img src="./public/imgaes/photo-1446776811953-b23d57bd21aa.avif" alt="Beyond Signal"
+                class="rounded-2xl object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px] shadow-lg shadow-[#8b5cff]/20 transition-transform duration-300 group-hover:scale-105">
+              <div class="text-xs text-gray-400 mt-2 text-center">
+                Beyond Signal
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide !w-auto">
+          <div class="relative flex items-center group cursor-pointer gap-7">
+            <span
+              class="text-[100px] md:text-[140px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] z-0 -mr-6 md:-mr-8">
+              3
+            </span>
+            <div class="relative z-10">
+              <img src="./public/imgaes/card-4.avif" alt="Chroma City"
+                class="rounded-2xl object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px] shadow-lg shadow-[#8b5cff]/20 transition-transform duration-300 group-hover:scale-105">
+              <div class="text-xs text-gray-400 mt-2 text-center">
+                Chroma City
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide !w-auto">
+          <div class="relative flex items-center group cursor-pointer gap-7">
+            <span
+              class="text-[100px] md:text-[140px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] z-0 -mr-6 md:-mr-8">
+              4
+            </span>
+            <div class="relative z-10">
+              <img src="./public/imgaes/photo-1500530855697-b586d89ba3ee.avif" alt="Velocity Zero"
+                class="rounded-2xl object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px] shadow-lg shadow-[#8b5cff]/20 transition-transform duration-300 group-hover:scale-105">
+              <div class="text-xs text-gray-400 mt-2 text-center">
+                Velocity Zero
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide !w-auto">
+          <div class="relative flex items-center group cursor-pointer gap-7">
+            <span
+              class="text-[100px] md:text-[140px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] z-0 -mr-6 md:-mr-8">
+              5
+            </span>
+            <div class="relative z-10">
+              <img src="./public/imgaes/photo-1485846234645-a62644f84728.avif" alt="Echo Protocol"
+                class="rounded-2xl object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px] shadow-lg shadow-[#8b5cff]/20 transition-transform duration-300 group-hover:scale-105">
+              <div class="text-xs text-gray-400 mt-2 text-center">
+                Echo Protocol
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+    <!-- <div class="swiper swiper-one flex">
+      <div class="swiper-wrapper flex">
+        <div class="swiper-slide text-[200px] mb-0 text-transparent [-webkit-text-stroke:1px_white] font-bold">1</div>
+        <div class="swiper-slide"><img src="./public/imgaes/photo-1519608487953-e999c86e7455.avif" alt=""
+            class=" rounded-xl object-cover w-full h-[250px]  shadow-md shadow-[#8b5cff]  ">
+          <div class="text-xs text-gray-400 mt-1 px-2 mb-5">
+            Neon District
+          </div>
+        </div>
+        <div class="swiper-slide text-[200px] mb-0 text-transparent [-webkit-text-stroke:1px_white] font-bold">2</div>
+        <div class="swiper-slide"><img src="./public/imgaes/photo-1519608487953-e999c86e7455.avif" alt=""
+            class=" rounded-xl object-cover w-full h-[250px]  shadow-md shadow-[#8b5cff]  ">
+          <div class="text-xs text-gray-400 mt-1 px-2 mb-5">
+            Neon District
+          </div>
+        </div>
+        <div class="swiper-slide text-[200px] mb-0 text-transparent [-webkit-text-stroke:1px_white] font-bold">3</div>
+        <div class="swiper-slide"><img src="./public/imgaes/photo-1519608487953-e999c86e7455.avif" alt=""
+            class=" rounded-xl object-cover w-full h-[250px]  shadow-md shadow-[#8b5cff]  ">
+          <div class="text-xs text-gray-400 mt-1 px-2 mb-5">
+            Neon District
+          </div>
+        </div>
+        <div class="swiper-slide text-[200px] mb-0 text-transparent [-webkit-text-stroke:1px_white] font-bold">4</div>
+        <div class="swiper-slide"><img src="./public/imgaes/photo-1519608487953-e999c86e7455.avif" alt=""
+            class=" rounded-xl object-cover w-full h-[250px]  shadow-md shadow-[#8b5cff]  ">
+          <div class="text-xs text-gray-400 mt-1 px-2 mb-5">
+            Neon District
+          </div>
+        </div>
+        <div class="swiper-slide text-[200px] mb-0 text-transparent [-webkit-text-stroke:1px_white] font-bold">5</div>
+        <div class="swiper-slide"><img src="./public/imgaes/photo-1519608487953-e999c86e7455.avif" alt=""
+            class=" rounded-xl object-cover w-full h-[250px]  shadow-md shadow-[#8b5cff]  ">
+          <div class="text-xs text-gray-400 mt-1 px-2 mb-5">
+            Echo Protocol
+          </div>
+        </div>
+
+
+      </div>
+    </div> -->
+
+
+
+    <!-- <div class="flex">
+      <div class="text-[200px] mb-0 text-transparent [-webkit-text-stroke:1px_white] font-bold">1</div>
+      <div>
+        <img src="./public/imgaes/photo-1519608487953-e999c86e7455.avif" alt=""
+          class=" rounded-xl object-cover w-full h-[250px]  shadow-xl shadow-[#8b5cff]  ">
+        <div class="text-xs text-gray-400 mt-1 px-2 mb-5">
+          Neon District
+        </div>
+
+      </div>
+    </div> -->
+  </div>
+
+
+
+
+
+  <!-- Choose your universe 6 -->
+  <div class="p-6   mt-35">
+    <h5 class="text-[#8b5cff] ">EXPLORE SOMETHIND NEW</h5>
+    <div class="flex gap-2  mb-5">
+      <h1 class="text-4xl text-white">Choose your </h1>
+      <h1 class="text-[#8b5cff] text-4xl">universe.</h1>
+    </div>
+
+
+    <!-- https://i.pinimg.com/1200x/38/ed/1f/38ed1fe2406532a3c24d053428200dde.jpg -->
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 p-8 bg-[#070814] min-h-screen">
+
+      <!-- 1. Sci-Fi -->
+      <div
+        class="group relative flex h-52 flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-[#0B0D1B] p-6 cursor-pointer transition-all duration-300 hover:border-white/20 hover:scale-[1.02]">
+        <div class="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-purple-600/15 blur-2xl">
+        </div>
+        <div>
+          <svg class="h-6 w-6 text-cyan-400 fill-current" viewBox="0 0 24 24">
+            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+          </svg>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-2xl font-medium text-white">Sci-Fi</h3>
+          <div class="flex items-center gap-1 text-xs text-slate-400">
+            <span>128 titles</span>
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Action (Active / Highlighted State) -->
+      <div
+        class="group relative flex h-52 flex-col justify-between overflow-hidden rounded-2xl border border-indigo-500/40 bg-[#0E1026] p-6 cursor-pointer ring-1 ring-indigo-500/30 transition-all duration-300 hover:scale-[1.02]">
+        <div class="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-purple-500/25 blur-2xl">
+        </div>
+        <div>
+          <!-- Lightning Icon -->
+          <svg class="h-6 w-6 text-amber-400 fill-current" viewBox="0 0 24 24">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-2xl font-medium text-white">Action</h3>
+          <div class="flex items-center gap-1 text-xs text-slate-400">
+            <span>214 titles</span>
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Thriller -->
+      <div
+        class="group relative flex h-52 flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-[#0B0D1B] p-6 cursor-pointer transition-all duration-300 hover:border-white/20 hover:scale-[1.02]">
+        <div class="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-purple-600/15 blur-2xl">
+        </div>
+        <div>
+          <!-- Target/Aura Circle Icon -->
+          <div class="flex h-6 w-6 items-center justify-center rounded-full border-2 border-cyan-400">
+            <div class="h-2 w-2 rounded-full bg-cyan-400"></div>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-2xl font-medium text-white">Thriller</h3>
+          <div class="flex items-center gap-1 text-xs text-slate-400">
+            <span>96 titles</span>
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Drama -->
+      <div
+        class="group relative flex h-52 flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-[#0B0D1B] p-6 cursor-pointer transition-all duration-300 hover:border-white/20 hover:scale-[1.02]">
+        <div class="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-purple-600/15 blur-2xl">
+        </div>
+        <div>
+          <!-- Diamond Outline Icon -->
+          <div class="h-4 w-4 rotate-45 border-2 border-cyan-400"></div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-2xl font-medium text-white">Drama</h3>
+          <div class="flex items-center gap-1 text-xs text-slate-400">
+            <span>173 titles</span>
+            <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- Footer 7 -->
+    <footer class="m-[120px]px-7 py-7 flex justify-between items-center border-t border-slate-800 text-white">
+      <div class="flex items-center gap-3">
+        <h1 class="btn btn-ghost text-xl p-0 flex items-center">
+          NOVA
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6 text-[#8b5cff] ml-1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+        </h1>
+        <span class="text-xs font-semibold text-gray-400">Stream beyond the ordinary</span>
+      </div>
+
+      <div class="flex gap-4">
+        <span class="text-xs font-semibold text-gray-400 cursor-pointer hover:text-white">Help</span>
+        <span class="text-xs font-semibold text-gray-400 cursor-pointer hover:text-white">Privacy</span>
+        <span class="text-xs font-semibold text-gray-400 cursor-pointer hover:text-white">Terms</span>
+        <span class="text-xs font-semibold text-gray-400">@2026 NOVA+</span>
+      </div>
+    </footer>
+
+
+
+
+    <script type="module">
+      // import Swiper bundle with all modules installed
+      import Swiper from 'swiper/bundle';
+
+      // import styles bundle
+      import 'swiper/css/bundle';
+
+      const swiperOne = new Swiper(".swiper-one", {
+
+        slidesPerView: 'auto',
+        spaceBetween: 32, // Controls space between cards
+        freeMode: true,
+        grabCursor: true,
+
+
+      });
+    </script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
