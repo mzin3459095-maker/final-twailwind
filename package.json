@@ -6,8 +6,8 @@
     "tailwindcss": "^4.3.3"
   },
   "scripts": {
-    "build": "npx @tailwindcss/cli -i app.css -o output.css",
-    "watch": "npx @tailwindcss/cli -i app.css -o output.css --watch",
+    "build": "npx @tailwindcss/cli -i app.css -o public/output.css",
+    "watch": "npx @tailwindcss/cli -i app.css -o public/output.css --watch",
     "dev": "vite --port 3000"
   },
   "devDependencies": {

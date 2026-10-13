@@ -6,7 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Final Exercise Tailwind</title>
   <link href="output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+
 </head>
+<style>
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #444; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
 
 <body class="bg-[#070817] border  ">
   <!-- Heading 1-->
@@ -82,7 +106,7 @@
         </div>
 
         <!-- Brand Logo -->
-        <div class="flex items-center gap-0.5 cursor-pointer">
+        <div class=" flex items-center gap-0.5 cursor-pointer">
           <span class="text-xl sm:text-2xl font-bold tracking-wider">NOVA</span>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
             class="size-5 sm:size-6 text-[#8b5cff]">
@@ -129,10 +153,10 @@
     </div>
 
     <!-- Hero Content Section -->
-    <div class="relative z-10 px-4 sm:px-8 pt-10 sm:pt-16 pb-12 max-w-2xl text-white">
+    <div class="relative z-10 px-4 sm:px-8 pt-10 sm:pt-16 pb-12 max-w-2xl text-white pl-6">
 
       <!-- Tagline -->
-      <div class="flex items-center gap-2 mb-2">
+      <div class="flex items-center gap-2 mb-2 ">
         <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
         <h3 class="text-xs sm:text-sm font-bold tracking-wider text-[#8b5cff]">NOVA+ ORIGINAL</h3>
       </div>
@@ -213,7 +237,7 @@
 
   <!-- Trending 2 -->
   <div class=" p-6  ">
-    <div class="p-6">
+    <div class="p-6 pl-1 justify-between">
       <h5 class="text-[#8b5cff] ">WHAT'S HOT</h5>
       <div class="lg:flex lg:justify-between felx-col lg:felx-row ">
         <div class="flex gap-2">
@@ -221,7 +245,7 @@
           <h1 class="text-[#8b5cff] text-4xl">now</h1>
         </div>
 
-        <div class="flex flex-wrap gap-2" id="filter-container">
+        <div class="pt-3 flex flex-wrap gap-2" id="filter-container">
           <button id="all_btn"
             class="filter-btn bg-[#8b5cff] border border-[#8b5cff] text-white px-2 py-1 md:px-4 md:py-1.5 rounded-lg text-xs  md:text-sm font-medium transition">
             All
@@ -636,7 +660,7 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-3 pt-3 gap-3 ">
       <!-- photo-1 -->
-      <div class="w-full ">
+      <div class="w-full pt-10">
         <!-- Image Box Wrapper (Aspect Video for 16:9 ratio) -->
         <div class="relative w-full md:aspect-[21/9] lg:aspect-video overflow-hidden rounded-2xl">
           <img src="./public/imgaes/photo-1500530855697-b586d89ba3ee.avif" alt="Dark Matter"
@@ -681,7 +705,7 @@
 
 
       <!-- photo-2 -->
-      <div class="w-full ">
+      <div class="w-full pt-10">
         <!-- Image Box Wrapper (Aspect Video for 16:9 ratio) -->
         <div class="relative w-full md:aspect-[21/9] lg:aspect-video overflow-hidden rounded-2xl">
           <img src="./public/imgaes/photo-1519501025264-65ba15a82390.avif" alt="Dark Matter"
@@ -726,7 +750,7 @@
 
 
       <!-- photo-3 -->
-      <div class="w-full ">
+      <div class="w-full pt-10">
         <!-- Image Box Wrapper (Aspect Video for 16:9 ratio) -->
         <div class="relative w-full md:aspect-[21/9] lg:aspect-video overflow-hidden rounded-2xl">
           <img src="./public/imgaes/photo-1500530855697-b586d89ba3ee.avif" alt="Dark Matter"
@@ -774,9 +798,9 @@
 
 
   <!-- Chroma city 4 -->
-  <div class=" ">
+  <div class="p-6 ">
     <div
-      class="flex  lg:flex-row mx-auto size-90 w-full shadow shadow-[#8b5cff]/100 m-40 border border-[#070817] rounded-3xl">
+      class="  flex  lg:flex-row mx-auto size-90 w-full shadow shadow-[#8b5cff]/100 m-40 border border-[#070817] rounded-3xl">
 
       <img src="https://i.pinimg.com/736x/1c/9e/63/1c9e6317993b73400d6b5906f7159042.jpg"
         class="object-cover basis-1/2 rounded-l-full w-2" alt="">
@@ -892,90 +916,118 @@
       <h1 class="text-[#8b5cff] text-4xl">10</h1>
     </div>
 
-    <div class="swiper swiper-one !overflow-visible flex">
-      <div class="swiper-wrapper  gap-5 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5">
+    <div class="swiper mySwiper ">
+      <div class="swiper-wrapper gird grid-cols-5">
 
-        <!-- Slide 1 -->
+        <!-- slide 1 -->
         <div class="swiper-slide !w-auto">
-          <div class="relative flex items-center group cursor-pointer gap-8 ">
+          <div class="relative flex items-end group cursor-pointer gap-4 md:gap-8">
             <!-- Outlined Number -->
             <span
-              class=" mb-0 text-[100px] md:text-[140px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)]  -mr-5 md:-mr-7">
+              class="mb-4 text-[110px] md:text-[160px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] -mr-2 md:-mr-6 z-20 shrink-0">
               1
             </span>
+
             <!-- Poster & Title -->
             <div class="relative z-10">
-              <img src="./public/imgaes/photo-1519608487953-e999c86e7455.avif" alt="Neon District"
-                class="rounded-2xl object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px] shadow-lg shadow-[#8b5cff]/20 transition-transform duration-300 group-hover:scale-105">
-              <div class="text-xs text-gray-400 mt-2 text-center">
+              <div
+                class="w-[260px] sm:w-[350px] md:w-[440px] aspect-video overflow-hidden rounded-2xl shadow-lg shadow-[#8b5cff]/20">
+                <img src="./public/imgaes/photo-1519608487953-e999c86e7455.avif" alt="Neon District"
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+              </div>
+              <div class="text-xs md:text-sm text-gray-400 mt-2 text-center">
                 Neon District
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Slide 2 -->
+        <!-- slide 2 -->
         <div class="swiper-slide !w-auto">
-          <div class="relative flex items-center group cursor-pointer gap-7">
+          <div class="relative flex items-end group cursor-pointer gap-4 md:gap-8">
+            <!-- Outlined Number -->
             <span
-              class="text-[100px] md:text-[140px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] z-0 -mr-6 md:-mr-8">
+              class="mb-4 text-[110px] md:text-[160px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] -mr-2 md:-mr-6 z-20 shrink-0">
               2
             </span>
+
+            <!-- Poster & Title -->
             <div class="relative z-10">
-              <img src="./public/imgaes/photo-1446776811953-b23d57bd21aa.avif" alt="Beyond Signal"
-                class="rounded-2xl object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px] shadow-lg shadow-[#8b5cff]/20 transition-transform duration-300 group-hover:scale-105">
-              <div class="text-xs text-gray-400 mt-2 text-center">
+              <div
+                class="w-[260px] sm:w-[350px] md:w-[440px] aspect-video overflow-hidden rounded-2xl shadow-lg shadow-[#8b5cff]/20">
+                <img src="./public/imgaes/hero.png" alt="Beyond Signal"
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+              </div>
+              <div class="text-xs md:text-sm text-gray-400 mt-2 text-center">
                 Beyond Signal
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Slide 3 -->
+        <!-- slide 3 -->
         <div class="swiper-slide !w-auto">
-          <div class="relative flex items-center group cursor-pointer gap-7">
+          <div class="relative flex items-end group cursor-pointer gap-4 md:gap-8">
+            <!-- Outlined Number -->
             <span
-              class="text-[100px] md:text-[140px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] z-0 -mr-6 md:-mr-8">
+              class="mb-4 text-[110px] md:text-[160px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] -mr-2 md:-mr-6 z-20 shrink-0">
               3
             </span>
+
+            <!-- Poster & Title -->
             <div class="relative z-10">
-              <img src="./public/imgaes/card-4.avif" alt="Chroma City"
-                class="rounded-2xl object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px] shadow-lg shadow-[#8b5cff]/20 transition-transform duration-300 group-hover:scale-105">
-              <div class="text-xs text-gray-400 mt-2 text-center">
+              <div
+                class="w-[260px] sm:w-[350px] md:w-[440px] aspect-video overflow-hidden rounded-2xl shadow-lg shadow-[#8b5cff]/20">
+                <img src="./public/imgaes/card-4.avif" alt="Chroma City"
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+              </div>
+              <div class="text-xs md:text-sm text-gray-400 mt-2 text-center">
                 Chroma City
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Slide 4 -->
+        <!-- slide 4 -->
         <div class="swiper-slide !w-auto">
-          <div class="relative flex items-center group cursor-pointer gap-7">
+          <div class="relative flex items-end group cursor-pointer gap-4 md:gap-8">
+            <!-- Outlined Number -->
             <span
-              class="text-[100px] md:text-[140px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] z-0 -mr-6 md:-mr-8">
+              class="mb-4 text-[110px] md:text-[160px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] -mr-2 md:-mr-6 z-20 shrink-0">
               4
             </span>
+
+            <!-- Poster & Title -->
             <div class="relative z-10">
-              <img src="./public/imgaes/photo-1500530855697-b586d89ba3ee.avif" alt="Velocity Zero"
-                class="rounded-2xl object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px] shadow-lg shadow-[#8b5cff]/20 transition-transform duration-300 group-hover:scale-105">
-              <div class="text-xs text-gray-400 mt-2 text-center">
+              <div
+                class="w-[260px] sm:w-[350px] md:w-[440px] aspect-video overflow-hidden rounded-2xl shadow-lg shadow-[#8b5cff]/20">
+                <img src="./public/imgaes/photo-1500530855697-b586d89ba3ee.avif" alt="Velocity Zero"
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+              </div>
+              <div class="text-xs md:text-sm text-gray-400 mt-2 text-center">
                 Velocity Zero
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Slide 5 -->
+        <!-- slide 5 -->
         <div class="swiper-slide !w-auto">
-          <div class="relative flex items-center group cursor-pointer gap-7">
+          <div class="relative flex items-end group cursor-pointer gap-4 md:gap-8">
+            <!-- Outlined Number -->
             <span
-              class="text-[100px] md:text-[140px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] z-0 -mr-6 md:-mr-8">
+              class="mb-4 text-[110px] md:text-[160px] font-black leading-none select-none text-transparent [-webkit-text-stroke:2px_rgba(255,255,255,0.2)] -mr-2 md:-mr-6 z-20 shrink-0">
               5
             </span>
+
+            <!-- Poster & Title -->
             <div class="relative z-10">
-              <img src="./public/imgaes/photo-1485846234645-a62644f84728.avif" alt="Echo Protocol"
-                class="rounded-2xl object-cover w-[200px] h-[100px] md:w-[400px] md:h-[200px] shadow-lg shadow-[#8b5cff]/20 transition-transform duration-300 group-hover:scale-105">
-              <div class="text-xs text-gray-400 mt-2 text-center">
+              <div
+                class="w-[260px] sm:w-[350px] md:w-[440px] aspect-video overflow-hidden rounded-2xl shadow-lg shadow-[#8b5cff]/20">
+                <img src="./public/imgaes/photo-1485846234645-a62644f84728.avif" alt="Echo Protocol"
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+              </div>
+              <div class="text-xs md:text-sm text-gray-400 mt-2 text-center">
                 Echo Protocol
               </div>
             </div>
@@ -983,6 +1035,8 @@
         </div>
 
       </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
 
 
@@ -1051,16 +1105,16 @@
 
 
   <!-- Choose your universe 6 -->
-  <div class="p-6   mt-35">
-    <h5 class="text-[#8b5cff] ">EXPLORE SOMETHIND NEW</h5>
-    <div class="flex gap-2  mb-5">
+  <div class="p-6   mt-35 ">
+    <h5 class="text-[#8b5cff] ml-5">EXPLORE SOMETHIND NEW</h5>
+    <div class="flex gap-2 ml-5 ">
       <h1 class="text-4xl text-white">Choose your </h1>
       <h1 class="text-[#8b5cff] text-4xl">universe.</h1>
     </div>
 
 
     <!-- https://i.pinimg.com/1200x/38/ed/1f/38ed1fe2406532a3c24d053428200dde.jpg -->
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 p-8 bg-[#070814] min-h-screen">
+    <div class=" grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 p-4 md:p-6 bg-[#070814]">
 
       <!-- 1. Sci-Fi -->
       <div
@@ -1152,9 +1206,9 @@
 
 
     <!-- Footer 7 -->
-    <footer class="m-[120px]px-7 py-7 flex justify-between items-center border-t border-slate-800 text-white">
+    <footer class="m-[120px]px-7 py-7 flex justify-between items-center  text-white ml-5">
       <div class="flex items-center gap-3">
-        <h1 class="btn btn-ghost text-xl p-0 flex items-center">
+        <h1 class=" text-xl p-0 flex items-center">
           NOVA
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="size-6 text-[#8b5cff] ml-1">
@@ -1176,22 +1230,36 @@
 
 
     <script type="module">
-      // import Swiper bundle with all modules installed
-      import Swiper from 'swiper/bundle';
-
-      // import styles bundle
-      import 'swiper/css/bundle';
-
-      const swiperOne = new Swiper(".swiper-one", {
-
-        slidesPerView: 'auto',
-        spaceBetween: 32, // Controls space between cards
-        freeMode: true,
-        grabCursor: true,
-
-
+      // hello
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          // Mobile / Small (1 slide)
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // Tablet / iPad Mini (2 slides)
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          // Large Screen / Desktop (Full / Multiple slides visible)
+          1024: {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+          },
+        },
       });
+      // hello
+
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
 </body>
 
